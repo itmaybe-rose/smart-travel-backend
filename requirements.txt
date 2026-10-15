@@ -1,0 +1,38 @@
+# HelloAgents Framework（0.2.9 才实现 MCP 工具自动展开 auto_expand；1.0+ 已重构为异步架构，勿升降级）
+hello-agents[protocols]==0.2.9
+
+# FastAPI and related dependencies
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+# pydantic 2.12+与fastmcp 2.10/mcp 1.18不兼容，必须钉住2.11.x
+pydantic>=2.11.0,<2.12
+pydantic-settings>=2.0.0
+
+# HTTP clients
+httpx>=0.27.0
+aiohttp>=0.10.0
+
+# Environment variables management
+python-dotenv>=1.0.0
+
+# CORS support
+python-multipart>=0.0.9
+
+# MCP related（版本组合经过实测验证，勿单独升级；fastmcp_slim会污染安装目录，严禁安装）
+fastmcp==2.10.1
+mcp==1.18.0
+uv>=0.8.0
+
+# LangGraph 多智能体（langgraph_planner.py 使用，AGENT_IMPL=langgraph 时必需）
+langgraph==1.2.14
+langgraph-checkpoint==4.2.0
+langgraph-prebuilt==1.1.0
+langgraph-sdk==0.4.6
+langchain-core==1.6.9
+langchain-openai==1.7.0
+langchain-mcp-adapters==0.3.2
+langchain-protocol==0.0.19
+
+# Other tools
+python-dateutil>=2.8.2
+requests>=2.31.0

@@ -1,0 +1,31 @@
+# === 敏感配置 ===
+.env
+.env.local
+.env.*.local
+
+# === 虚拟环境（Windows venv 产物，Linux 容器不可用）===
+venv-lg/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# === 本地测试 ===
+test_*.py
+*.log
+*.tmp
+
+# === IDE / OS ===
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+.trae/
+
+# === Git ===
+.git/
